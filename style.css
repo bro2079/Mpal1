@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas: "hd hd hd hd hd"
+                         "mn mn mn mn mn"
+                         "ft ft ft ft ft";
+    
+}
+
+header {
+    background-color: red;
+    grid-area: hd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.3rem;
+}
+
+.nav-bar {
+    padding-left: 1rem;
+    position: relative;
+}
+
+.nav-bar #navCloseBtn{
+    position: relative;
+    left: -50%;
+    display: none;
+    margin-left: 1rem;
+}
+
+.profile{
+    padding-right: 1rem;
+}
+
+main {
+    background-color: blue;
+    grid-area: mn;
+    position: relative;
+}
+
+main div {
+    font-size: 3rem;
+    width: 100%;
+    height: 80vh;
+    background-color: purple;
+    color: aliceblue;
+    text-transform: capitalize;
+    position: absolute;
+
+    display: grid;
+    place-content: center;
+}
+
+.sidebar {
+    width: 50%;
+    background-color: orange;
+    left: -50%;
+    z-index: 4;
+}
+
+.home-page {
+    z-index: 3;
+}
+
+.lofi-page {
+    z-index: 2;
+}
+
+footer {
+    font-size: 2.3rem;
+    background-color: green;
+    grid-area: ft;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* .home-icon {
+
+} */
